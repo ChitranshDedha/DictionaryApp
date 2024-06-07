@@ -199,6 +199,7 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
     @Composable
     fun Meaning(
         meaning: Meaning,
@@ -268,7 +269,7 @@ class MainActivity : ComponentActivity() {
                 ) {
 
                     Text(
-                        text = stringResource(R.string.definition),
+                        text = stringResource(R.string.example),
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 19.sp,
                         color = MaterialTheme.colorScheme.primary
@@ -285,6 +286,57 @@ class MainActivity : ComponentActivity() {
                 }
             }
 
+            if (meaning.synonyms.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(8.dp))
+
+                Row(
+                    modifier = Modifier
+                        .padding(horizontal = 8.dp)
+                ) {
+
+                    Text(
+                        text = stringResource(R.string.synonyms),
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 19.sp,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    Text(
+                        text = meaning.synonyms.joinToString(", "),
+                        fontSize = 17.sp,
+                        color = MaterialTheme.colorScheme.onBackground
+                    )
+
+                }
+            }
+
+            if (meaning.antonyms.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(8.dp))
+
+                Row(
+                    modifier = Modifier
+                        .padding(horizontal = 8.dp)
+                ) {
+
+                    Text(
+                        text = stringResource(R.string.antonyms),
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 19.sp,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    Text(
+                        text = meaning.antonyms.joinToString(", "),
+                        fontSize = 17.sp,
+                        color = MaterialTheme.colorScheme.onBackground
+                    )
+
+                }
+            }
         }
 
     }

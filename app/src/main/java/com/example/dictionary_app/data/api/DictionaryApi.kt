@@ -4,9 +4,7 @@ import com.example.dictionary_app.data.dto.WordResultDto
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-/**
- * @author Ahmed Guedmioui
- */
+
 interface DictionaryApi {
 
     @GET("{word}")

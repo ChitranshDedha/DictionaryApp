@@ -17,7 +17,9 @@ fun WordItemDto.toWordItem() = WordItem (
 
 fun MeaningDto.toMeaning() = Meaning(
     definition = definitionDtoToDefinition(definitions?.get(0)),
-    partOfSpeech = partOfSpeech ?: ""
+    partOfSpeech = partOfSpeech ?: "",
+    antonyms = antonyms ?: emptyList(),
+    synonyms = synonyms?: emptyList()
 )
 
 
@@ -25,5 +27,5 @@ fun definitionDtoToDefinition(
     definitionDto: DefinitionDto?
 ) = Definition(
     definition = definitionDto?.definition ?: "",
-    example = definitionDto?.example ?: ""
+    example = definitionDto?.example ?: "",
 )

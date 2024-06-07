@@ -4,4 +4,6 @@
     <string name="search_a_word">Search a word</string>
     <string name="definition">Definition:</string>
     <string name="example">Example:  </string>
+    <string name="synonyms">Synonyms</string>
+    <string name="antonyms">Antonyms</string>
 </resources>
